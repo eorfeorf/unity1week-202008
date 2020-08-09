@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitlieCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6893600745127345475, guid: 69b9987d29fdbb84780f2d63a74ede22, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6893600745127345503, guid: 69b9987d29fdbb84780f2d63a74ede22, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -463,6 +467,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8848020189221691895}
+    - target: {fileID: 7342835934737943536, guid: 69b9987d29fdbb84780f2d63a74ede22, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69b9987d29fdbb84780f2d63a74ede22, type: 3}
 --- !u!1001 &8848020189221691894
