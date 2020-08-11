@@ -11,7 +11,7 @@ public class PlayerShot : MonoBehaviour
     
     void Start()
     {
-        normalGun = Instantiate(normalGun);
+        normalGun = Instantiate(normalGun, this.gameObject.transform);
         normalGun.GetComponent<NormalGun>().EmitterTransform = emitterTransform;
     }
 
