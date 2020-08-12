@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Bullets
 {
     public class DestroyBullet : MonoBehaviour
     {
+        public Action<GameObject> OnHitEnemy { get; set; }
+
         private void OnCollisionEnter(Collision other)
         {
-            if (other.gameObject.CompareTag("DestroyFrame"))
+            if (other.gameObject.CompareTag("Enemy"))
             {
-                Destroy(this.transform.root.gameObject);
+                //OnHitEnemy?.Invoke();
             }
         }
     }
