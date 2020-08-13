@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
+using Weapons;
 
 namespace Guns
 {
-    public class NormalGun : MonoBehaviour
+    public class NormalGun : MonoBehaviour, IGun
     {
         //private float shotTimer = 0.0f;
-        [SerializeField] private GameObject normalBullet = default;
-        
-        public Transform EmitterTransform { get; set; }
+        [SerializeField] private GameObject bullet = default;
         
         private bool isActive = true;
+        
+        public Transform EmitterTransform { get; set; }
 
         private void Update()
         {
@@ -24,7 +25,7 @@ namespace Guns
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 //Debug.Log(EmitterTransform.position);
-                Instantiate(normalBullet, EmitterTransform.position, Quaternion.identity);
+                Instantiate(bullet, EmitterTransform.position, Quaternion.identity);
             }
         }
     }

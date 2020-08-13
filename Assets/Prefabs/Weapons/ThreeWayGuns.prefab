@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2863236474926807833}
-  - component: {fileID: 3208367714681073586}
+  - component: {fileID: 2548859339460753720}
   m_Layer: 0
-  m_Name: NormalGuns
+  m_Name: ThreeWayGuns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3208367714681073586
+--- !u!114 &2548859339460753720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2863236474926807834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e516bc3845a75a478c6a83121879952, type: 3}
+  m_Script: {fileID: 11500000, guid: aadc459a13a289f4fbb648b424186925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3404264917554980228, guid: dd8d7715e49b3824abe6a8948d5add64, type: 3}
+  bullet: {fileID: 3404264917554980228, guid: 931f03654c70ebe45bcd8293260a6435, type: 3}

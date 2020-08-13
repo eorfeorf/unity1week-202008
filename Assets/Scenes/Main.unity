@@ -1424,6 +1424,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3776351473742609851, guid: c74caff8603d50f41a35c934ef9b6c0b, type: 3}
+      propertyPath: threeWayGun
+      value: 
+      objectReference: {fileID: 2863236474926807834, guid: 2c6405cdc392c4f47a5576c8d96518ad, type: 3}
     - target: {fileID: 3776351473742609854, guid: c74caff8603d50f41a35c934ef9b6c0b, type: 3}
       propertyPath: m_Name
       value: Player
