@@ -8,18 +8,13 @@ public class SceneChange : MonoBehaviour
     [SerializeField] 
     private string sceneName = default;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void Change()
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Change(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }

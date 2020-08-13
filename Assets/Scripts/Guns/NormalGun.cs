@@ -23,7 +23,7 @@ namespace Guns
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                Debug.Log(EmitterTransform.position);
+                //Debug.Log(EmitterTransform.position);
                 Instantiate(normalBullet, EmitterTransform.position, Quaternion.identity);
             }
         }

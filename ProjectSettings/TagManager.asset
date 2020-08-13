@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - DestroyFrame
+  - Enemy
   layers:
   - Default
   - TransparentFX
