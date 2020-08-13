@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class DestroyFrame : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            Destroy(other.gameObject);
+            Destroy(other.transform.root.gameObject);
         }
     }
 }

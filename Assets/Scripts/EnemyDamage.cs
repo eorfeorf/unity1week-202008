@@ -10,18 +10,21 @@ public class EnemyDamage : MonoBehaviour
     
     public Action OnDied { get;set; }
     
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            var b = other.gameObject.GetComponent<IBullet>();
+            // HP減少
+            var b = other.transform.root.GetComponent<IBullet>();
             int hp = enemyHp.Add(-b.Damage);
             if (hp <= 0)
             {
                 Destroy(this.gameObject);
                 OnDied?.Invoke();
             }
-            Destroy(other.gameObject);
+            
+            // 弾の削除
+            Destroy(other.transform.root.gameObject);
         }
     }
 }
