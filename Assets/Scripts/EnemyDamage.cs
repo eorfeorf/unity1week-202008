@@ -15,7 +15,7 @@ public class EnemyDamage : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             // HP減少
-            var b = other.transform.root.GetComponent<IBullet>();
+            var b = other.gameObject.GetComponent<IBullet>();
             int hp = enemyHp.Add(-b.Damage);
             if (hp <= 0)
             {

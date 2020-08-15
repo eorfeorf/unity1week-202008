@@ -25,7 +25,7 @@ namespace Guns
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 //Debug.Log(EmitterTransform.position);
-                Instantiate(bullet, EmitterTransform.position, Quaternion.identity);
+                //Instantiate(bullet, EmitterTransform.position, Quaternion.identity);
             }
         }
     }
