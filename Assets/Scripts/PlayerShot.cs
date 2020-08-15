@@ -8,13 +8,14 @@ using Weapons;
 public class PlayerShot : MonoBehaviour
 {
     [SerializeField] private Transform emitterTransform = default;
-    [SerializeField] private GameObject normalGun;
-    [SerializeField] private GameObject threeWayGun;
+    [SerializeField] private GameObject[] guns;
     
     void Start()
     {
-        SetupGun(normalGun);
-        SetupGun(threeWayGun);
+        foreach (var gun in guns)
+        {
+            SetupGun(gun);
+        }
     }
 
     void Update()

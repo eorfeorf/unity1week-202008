@@ -5,9 +5,9 @@ namespace Guns
 {
     public class NormalGun : MonoBehaviour, IGun
     {
-        //private float shotTimer = 0.0f;
         [SerializeField] private GameObject bullet = default;
-        
+        [SerializeField] private float maxTime = 2.0f;
+                
         private bool isActive = true;
         
         public Transform EmitterTransform { get; set; }
@@ -24,7 +24,6 @@ namespace Guns
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                //Debug.Log(EmitterTransform.position);
                 var bulletParent = Instantiate(bullet, EmitterTransform.position, Quaternion.identity);
                 Destroy(bulletParent);
             }

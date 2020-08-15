@@ -8,6 +8,11 @@ namespace Bullets
     {
         [SerializeField] private int damage = 1;
 
+        private void Awake()
+        {
+            this.transform.SetParent(null);
+        }
+
         public int Damage
         {
             get => damage;

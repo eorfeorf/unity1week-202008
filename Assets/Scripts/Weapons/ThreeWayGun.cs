@@ -5,16 +5,17 @@ namespace Guns
 {
     public class ThreeWayGun : MonoBehaviour, IGun
     {
-        //private float shotTimer = 0.0f;
         [SerializeField] private GameObject bullet = default;
-        
+        [SerializeField] private float maxTime = 2.0f;
+
         public Transform EmitterTransform { get; set; }
-        
-        private bool isActive = true;
+
+        private readonly bool _isActive = true;
+        private float _shotTimer = 0.0f;
 
         private void Update()
         {
-            if (isActive)
+            if (_isActive)
             {
                 MakeUpdate();
             }
@@ -22,10 +23,12 @@ namespace Guns
 
         private void MakeUpdate()
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            _shotTimer += Time.deltaTime;
+            if (_shotTimer > maxTime)
             {
-                //Debug.Log(EmitterTransform.position);
-                //Instantiate(bullet, EmitterTransform.position, Quaternion.identity);
+                _shotTimer -= maxTime;
+                var bulletParent = Instantiate(bullet, EmitterTransform.position, Quaternion.identity);
+                Destroy(bulletParent);
             }
         }
     }
