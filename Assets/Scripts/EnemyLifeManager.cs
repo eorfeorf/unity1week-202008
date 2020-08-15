@@ -3,12 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using Bullets;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class EnemyDamage : MonoBehaviour
+public class EnemyLifeManager : MonoBehaviour
 {
     [SerializeField] private EnemyHp enemyHp = default;
+    [SerializeField] private UnityEvent onDied;
+    [SerializeField] private UnityEvent onDamage;
     
-    public Action OnDied { get;set; }
+    public UnityEvent OnDied => onDied;
+    public UnityEvent OnDamage => onDamage; 
+    
     
     private void OnTriggerEnter(Collider other)
     {
@@ -20,7 +25,7 @@ public class EnemyDamage : MonoBehaviour
             if (hp <= 0)
             {
                 Destroy(this.gameObject);
-                OnDied?.Invoke();
+                onDied?.Invoke();
             }
             
             // 弾の削除

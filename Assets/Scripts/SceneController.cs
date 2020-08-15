@@ -3,19 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneController : MonoBehaviour
+public class SceneController: MonoBehaviour
 {
-    [SerializeField] private EnemyDamage _enemyDamage;
-    [SerializeField] private GameObject _gameClear;
-    [SerializeField] private GameObject _gameOver;
+    [SerializeField] private GameObject _gameClear = default;
+    [SerializeField] private GameObject _gameOver = default;
 
-    private void Awake()
-    {
-        _enemyDamage.OnDied += Clear;
-    }
-
-    void Clear()
+    public void Clear()
     {
         _gameClear.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        _gameOver.SetActive(true);
     }
 }
